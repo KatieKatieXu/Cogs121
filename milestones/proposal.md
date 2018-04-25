@@ -1,0 +1,91 @@
+Team: CodeStaff
+
+Yue (Kate) Xu
+Heitor Schueroff
+Jasper Travers    A13142126
+Niral Patel       A13010070
+
+Ideas 
+1. Web application for pet care. The only one tool you need to have greate life expeirence with your loved pet with less annoyance. Due to more and more young people in our gereneration who would like to have pet as part of their family. What if I just like to have them without all of the things I need to care (If I just a freshman of being a pet parents, I think I have too much things to be aware of. But if I have this webapp, it makes things so much clear and I will have more confidence to become a more responsible pet parent. )
+ 
+  - Vet appointment, physical check (Vet help)
+  - Immunity 
+  - Supply community (order pet supplyment )
+  - Emergency Vet call
+  - Pet identity profile (health, personality, how active in the cummunity)
+  - Meet Pet Date (local pet parents info, you can see other real pet parents in our community, go and meet them. Event related in the  future)
+ 
+2. The better way to remember new memories is to related something old, something old that you have typped on your keyboard to the interet. So let's come up with a webapp that can help you to gain the brandy new knowledge by relating those new content to something old that you already have in your long term momory. The challenge would be pull out all of the user's output (keyboard input) 
+
+3. Plataform to help people with diabetes to keep track of their diet and how it affects their blood sugar level as well as the insulin intakes. Understanding how different things affect insulin level helps the patient know beforehand how much insulin to take or how much sugar to consume. Doctors of patients with diabetes also ask for this data regularly to accompany the health of the patient.
+
+
+# 4 : Class Dashboard
+
+## Inspiration and Response
+
+### Idea: Student knowledge aggregator on a class wide scale.
+  A note taking system which allows students to build up group knowledge in the specific context of a given class.
+
+### Pain point:
+  Students have too many resources in too many places without the ability to quickly call upon this dispearsed knowledge without doing individual knowledge agregation by some combination of memorization, notes, files, pdfs, podcast, outside links, etc. 
+
+### Project idea in response to this pain point:
+  Build a note reviewing interface (notes do not have to be directly written into this interface - that's not the point; it is intended to be a presentation tool not an authoring tool) which visually connects note blocks to source links
+
+#### Initial metaphor
+  In the style of Cornell notes (note sheet of paper divided in two parts, (1) questions and (2) responses/notes associated with the question) a link would be accompanied by a students notes on the subject. 
+  ie. [Syllabus] | Test dates, OH times, theme
+      [JS Lecture1] | Code snippets from the last few days of live coding in lecture emphasizing javascript's distinguishing features. 
+
+
+
+## Affordances of such a potential tool or "The Web App"
+
+I see two scenarios for such a *class* tool for taking notes as described above. In the style of blackboard or https://csemoodle3.ucsd.edu/my/ this would be a class tool. Each student could see another students notes, and an aggregate note page could be composed by the students as a sort of "master summary" of each unit of information (reading, lecture, subject-of-a-different-scale). 
+
+  1. A professor or instructor builds a template for the class to follow. To follow the metaphor of cornell notes, this would look like the professor building the "questions" side of the notes, while students document their learning and take notes in the "answer" side.
+
+  2. Students build their own repository of information in the context of a specific class without the explicit direction or a professor or instructor
+
+This tool ideally facilitates both scenarios.
+The advantage of students and professors having access to such a tool are many.
+- A "google doc group final study guide" would continuously exist - in the direct context as every information source.
+- Students can compare what they found to be the important points of a lecture to what other students focused their notes on
+- All students could come together to build a central knowledge of a given information source (lecture, blog post, resource site) in a federated style inspired by Ward Cunningham.
+- Students would have access to varied perspectives on understanding material as happens through a note taking process.
+
+- Professors could monitor notes in various ways which would turn into some part of our implementation of this app. From offering a wordcount within different sections to any sort of complex operation on notes in a classwide scope.
+
+
+## Technology and Implementation Ideas or "The Web App"
+
+- If a markdown style note format were adopted by a class, interesting things such as headers could be collected - and "status reports" could be generated by anyone (student or instructor) querying this group knowledge base such as "how many lines were written in a section titled with they keyword javascript"? "what subject was most noted? least noted?" and so on. This could potentially provide an instructor a deeper insight into student understanding.
+
+- Full text search of notes.
+- Full text search of information sources (maybe only lecture pdfs, or some way to gather what kind of resource a link points to; a blog or mdn doc could be easy)
+- filters for various kinds of searches in different contexts of information sources
+
+
+# Conclusion of this Drama via More Stream of Consciousness
+
+- A professor could give this system as a template of knowledge for a class he is teaching.
+
+- Students as a collective can generate a tool to access the information of a class.
+
+These things could have all different kinds of organization structures, and the visual representation of this information would be very important to its use. The ability for students to understand the context of any given written note, to be able to switch between a general knowledge mode and a personal knowledge mode, and many more things would be necessary for usable environment.
+
+We'd not be looking to build all of this, but some minimum subset to get an interesting working tool as a result - with the rest being streach goals or further work.
+
+A minimum set could look like:
+  The Cornell stlye system
+  Ability to querry information about notes on a class scale
+  Access between all students notes
+
+
+---
+
+Thank you for reading.
+
+
+
