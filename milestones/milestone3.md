@@ -2,9 +2,9 @@
 
 ## UI Skeleton
 
-![Skeleton 1](/assets/m3_skeleton_1.png)
+![Skeleton 1](/../assets/m3_skeleton_1.png)
 
-![Skeleton 2](/assets/m3_skeleton_2.png)
+![Skeleton 2](/../assets/m3_skeleton_2.png)
 
 
 ## Comparison to m2
