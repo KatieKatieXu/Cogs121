@@ -3,6 +3,8 @@
 
 [ui skeleton shots here]
 
+![Current UI 1](../assets/m4_menu.png)
+
 [writen explanation of how UI skeleton screenshots have improved upon prev versions]
 Since the last milestone, we have added more information about each class as well as displayed it all using more database calls instead of hard-coded strings in the front end. As our application is very small in terms of pages, we haven't added any pages or changed how the existing content is displayed, but as we build up our database, our UI includes more and more information in a formatted way that is easy for the user to read.
 
