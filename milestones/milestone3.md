@@ -2,17 +2,17 @@
 
 ## UI Skeleton
 
-![Skeleton 1](/../assets/m3_1.png)
+![Skeleton 1](../assets/m3_1.png)
 
-![Skeleton 2](/../assets/m3_2.png)
+![Skeleton 2](../assets/m3_2.png)
 
-![Skeleton 3](/../assets/m3_3.png)
+![Skeleton 3](../assets/m3_3.png)
 
-![Skeleton 4](/../assets/m3_4.png)
+![Skeleton 4](../assets/m3_4.png)
 
-![Skeleton 5](/../assets/m3_5.png)
+![Skeleton 5](../assets/m3_5.png)
 
-![Skeleton 6](/../assets/m3_6.png)
+![Skeleton 6](../assets/m3_6.png)
 
 ## Comparison to m2
 
