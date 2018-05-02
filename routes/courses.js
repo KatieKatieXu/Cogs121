@@ -14,6 +14,18 @@ router.get('/', function (req, res) {
 /* GET course page */
 
 router.get('/:id', function (req, res) {
+
+  db.all('SELECT * FROM courses WHERE id=$id',
+    {
+      $id: req.params.id
+    },
+    (err, rows) => {
+      console.log (rows);
+      res.send (rows);
+    }
+  );
+
+/*
     switch (req.params.id) {
         case 'cogs121':
             res.render('course', {name: 'COGS 121'});
@@ -25,7 +37,11 @@ router.get('/:id', function (req, res) {
             res.render('course', {name: 'COGS 102C'});
             break;
     }
+
+*/
+
 });
+
 
 db.close();
 

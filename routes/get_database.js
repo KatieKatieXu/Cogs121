@@ -23,7 +23,10 @@ db.each ("SELECT name FROM courses", (err, row) => {
   //console.log ("final: ", loc2);
 }); //end each
 
-db.all ('SELECT id, name FROM courses', (err, rows) => {
+db.all ('SELECT * FROM courses WHERE id=$id',
+  {
+    $id: 'cse131'
+  }, (err, rows) => {
   console.log (rows);
 });
 
