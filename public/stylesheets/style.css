@@ -4,5 +4,28 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  padding: 10px;
 }
+
+i {
+    float: right;
+    width: 20%;
+    <text-align: center;
+    color: white;
+  }
+
+b{
+    margin: 10px 20px 10px 40px;
+}
+c{
+    margin 10px 10px 10px 50px;
+}
+.icon-bar i:hover {
+  background-color: #000;
+}
+
+e{
+    font-size: 12px;
+}
+

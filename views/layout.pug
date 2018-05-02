@@ -2,26 +2,58 @@ doctype html
 html
   head
     title= title
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous")
     link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4", crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/dashboard.css')
   body
 
-    nav(class='navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow')
-      a(class='navbar-brand col-sm-3 col-md-2 mr-0' href='/') Plato
-
     div(class='container-fluid')
       div(class='row')
         nav(class='col-md-2 d-none d-md-block bg-light sidebar')
           div(class='sidebar-sticky')
-            ul(class='nav flex-column')
-              li(class='nav-item')
-                a(class='nav-link active' href='/') Calendar
-            h6(class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted') Courses
-            ul(class='nav flex-column mb-2')
-              li(class='nav-item')
-                a(class='nav-link' href='/courses/cogs121') COGS 121
-                a(class='nav-link' href='/courses/cogs123') COGS 123
-                a(class='nav-link' href='/courses/cogs102c') COGS 102C
+
+            div(class='navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow')
+              a(class='navbar-brand col-sm-3 col-md-2 mr-0' href='/') Plato
+              i(class='icon-bar')
+                b(class='fas fa-bullhorn')
+                c(class='fas fa-bell')
+
+
+            div(class="accordion" id="accordion")
+              div(class="card")
+                div(class="card-header" id="headingOne")
+                  h5(class="mb-0")
+                    button(class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                      COGS 121
+
+
+            div(id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion")
+              div(class="card-body")
+                e(class='nav-link' href='/courses/cogs121') Schedule
+                e(class='nav-link' href='/courses/cogs121') Assignments
+                e(class='nav-link' href='/courses/cogs121') Announcements
+                e(class='nav-link' href='/courses/cogs121') Resources
+
+            div(class="card")
+              div(class="card-header" id="headingTwo")
+                h5(class="mb-0")
+                  button(class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                    COGS 123
+
+            div(id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion")
+              div(class="card-body")
+
+            div(class="card")
+              div(class="card-header" id="headingThree")
+                h5(class="mb-0")
+                  button(class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                    COGS 102C
+
+            div(id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion")
+              div(class="card-body")
+
+
+
 
     block content
