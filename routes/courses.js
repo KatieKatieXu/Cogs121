@@ -1,7 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
+const sqlite3 = require ('sqlite3');
+const db = new sqlite3.Database ('../classes.db');
+
+router.get('/', function (req, res) {
+  
+  db.all ('SELECT id, name FROM courses', (err, rows) => {
+    res.send (rows);
+  });
+}
+
 /* GET course page */
+
 router.get('/:id', function (req, res) {
     switch (req.params.id) {
         case 'cogs121':
@@ -15,5 +26,7 @@ router.get('/:id', function (req, res) {
             break;
     }
 });
+
+db.close();
 
 module.exports = router;

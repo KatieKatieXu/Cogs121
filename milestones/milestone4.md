@@ -38,3 +38,9 @@ class database item:
       link 1
       link 2 
       ...
+
+## DB resources
+
+http://www.sqlitetutorial.net/sqlite-nodejs/insert/
+
+
