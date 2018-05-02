@@ -5,10 +5,15 @@ const sqlite3 = require ('sqlite3');
 const db = new sqlite3.Database ('../classes.db');
 
 router.get('/', function (req, res) {
+const db = new sqlite3.Database ('../classes.db');
+  db.serialize(() => {
   
   db.all ('SELECT id, name FROM courses', (err, rows) => {
     res.send (rows);
   });
+});
+
+  db.close();
 }
 
 /* GET course page */
