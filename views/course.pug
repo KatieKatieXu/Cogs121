@@ -3,10 +3,29 @@ extends layout
 block content
     div(class='col-md-9 ml-sm-auto col-lg-10 px-4' role='main')
         div(class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom')
-            h1(class='h2') #{name}
+            h1(class='h4') #{name}
             div(class='btn-toolbar mb-2 mb-md-0')
                 div(class='btn-group mr-2')
                     button(class='btn btn-sm btn-primary') Schedule
                     button(class='btn btn-sm btn-outline-secondary') Assignments
                     button(class='btn btn-sm btn-outline-secondary') Announcements
                     button(class='btn btn-sm btn-outline-secondary') Resources
+        h2(class= 'h6') Schedule
+    table(class='table table-bordered table-grey')
+        thead
+            tr
+                th(scope='col') Week
+                th(scope='col') Date
+                th(scope='col') Topic
+                th(scope='col') Reading
+                th(scope='col') Due
+            tr
+                th(scope='row') 1
+                td Mon
+
+
+
+
+
+
+

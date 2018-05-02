@@ -1,8 +1,15 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
+.navbar {
+
+
+}
+
+<<<<<<< HEAD
 a {
   color: white;
   padding: 10px;
@@ -28,4 +35,11 @@ c{
 e{
     font-size: 12px;
 }
+=======
+#plato {
+  color: white;
+}
+
+
+>>>>>>> 0813fc57a8a180cd473fd157c41a594040e14a2c
 
