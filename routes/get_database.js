@@ -28,7 +28,6 @@ db.all ('SELECT * FROM courses WHERE id=$id',
     $id: 'cse131'
   }, (err, rows) => {
   console.log (rows);
-    console.log (err);
 });
 
 });
