@@ -1,0 +1,64 @@
+extends layout
+
+block content
+
+	div(class='col-md-9 ml-sm-auto col-lg-10 px-4' role='main')
+		div(class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom')
+		h1(class='h2') #{name}
+
+		div(id='myDiv')
+			
+	
+		script.
+
+			//display for each class
+			const classSet = [];
+
+			const x = [];
+			//arrays for the different sets of y-axes (assess, hw, readings)
+			const y1 = [];
+			const y2 = [];
+			const y3 = [];
+
+
+			//connect to real database
+
+			Object.keys(db).forEach(function(class){
+				x.push(class.name);
+				y1.push(Object.keys(class.assessments).length);
+				y2.push(Object.keys(class.homeworks).length);
+				y3.push(Object.keys(class.readings).length); 
+			});
+
+			var data = [];
+
+			//create different objects for the graph
+			var trace1 = {
+				x: x,
+				y: y1,
+				name: "assessments",
+				type: "bar"
+			}
+			data.push(trace1);
+
+			var trace2 = {
+				x: x,
+				y: y2,
+				name: "homeworks",
+				type: "bar"
+			}
+			data.push(trace2);
+
+			var trace3 = {
+				x: x,
+				y: y3,
+				name: "readings",
+				type: "bar"
+			}
+			data.push(trace3);
+
+			//add this class to the array
+
+			var layout = {barmode: 'group'};
+
+			Plotly.newPlot('myDiv', data, layout);

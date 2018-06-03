@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+	<script> require('plotly')(username, api_key); </script>
+
+</head>
+
+
+<body>
+
+	<script>
+
+		var data = [
+		  {
+		    x: ["giraffes", "orangutans", "monkeys"],
+		    y: [20, 14, 23],
+		    type: "bar"
+		  }
+		];
+		var graphOptions = {filename: "basic-bar", fileopt: "overwrite"};
+		plotly.plot(data, graphOptions, function (err, msg) {
+		    console.log(msg);
+		});
+	</script>
+
+</body>

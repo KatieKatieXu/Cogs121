@@ -17,6 +17,9 @@ router.get('/:id', function (req, res) {
             //res.send("the third");
             res.render('course', {name: 'COGS 102C'});
             break;
+        case 'datavisual':
+            res.render('test', {name: 'Visual'});
+            break;
     }
 });
 
