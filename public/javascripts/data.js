@@ -11,6 +11,41 @@ events = [
         end: '2018-06-01T14:50:00',
         type: 'lecture',
       },
+      {
+        id: 2,
+        title: 'COGS 121 - Lecture',
+        start: '2018-06-04T14:00:00',
+        end: '2018-06-04T14:50:00',
+        type: 'lecture',
+      },
+      {
+        id: 3,
+        title: 'COGS 121 - Lecture',
+        start: '2018-06-06T14:00:00',
+        end: '2018-06-06T14:50:00',
+        type: 'lecture',
+      },
+      {
+        id: 4,
+        title: 'COGS 121 - FinalShowOff',
+        start: '2018-06-08T14:00:00',
+        end: '2018-06-08T14:50:00',
+        type: 'lecture',
+      },
+      {
+        id: 5,
+        title: 'COGS 121 - Milestone 6 Deadline',
+        start: '2018-06-01T13:59:00',
+        type: 'assignment',
+
+      },
+      {
+        id: 6,
+        title: 'COGS 121 - Final Milestone Deadline',
+        start: '2018-06-06T13:59:00',
+        type: 'assignment',
+
+      },
     ],
   },
   {
