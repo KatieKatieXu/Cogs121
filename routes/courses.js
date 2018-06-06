@@ -1,0 +1,17 @@
+/*
+ *  responds to client getrequests of for server data in various transactions
+ *  with the site
+ *
+ */
+const express = require('express');
+const router = express.Router();
+
+const model = require('../models/courses.js');
+
+router.get('/events/', function (req, res) { 
+  res.send (model (req.classes, req.event_types));
+});
+
+//console.log (model(['cse131'], []));
+
+module.exports = router;
