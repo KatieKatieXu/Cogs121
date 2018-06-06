@@ -31,11 +31,11 @@ block content
               .filter-container
                 .form-check
                   label.form-check-label
-                    input.form-check-input(type='checkbox' value='' checked)
+                    input.form-check-input(type='checkbox' value='cogs121' checked onchange='updateEvents()')
                     span.ml-2 COGS 121
                 .form-check
                   label.form-check-label
-                    input.form-check-input(type='checkbox' value='' checked)
+                    input.form-check-input(type='checkbox' value='cse131' checked onchange='updateEvents()')
                     span.ml-2 CSE 131
             button.list-group-item.list-group-item-action(type='button'
             data-toggle='collapse' data-target="#event-filters"
@@ -46,15 +46,11 @@ block content
               .filter-container
                 .form-check
                   label.form-check-label
-                    input.form-check-input(type='checkbox' value='')
+                    input.form-check-input(type='checkbox' value='lecture' checked onchange='updateEvents()')
                     span.ml-2 Lectures
                 .form-check
                   label.form-check-label
-                    input.form-check-input(type='checkbox' value='')
-                    span.ml-2 Office Hours
-                .form-check
-                  label.form-check-label
-                    input.form-check-input(type='checkbox' value='')
+                    input.form-check-input(type='checkbox' value='assignment' checked onchange='updateEvents()')
                     span.ml-2 Deadlines
 
           #datepicker

@@ -25,9 +25,7 @@ $(function() {
       right: 'agendaDay,agendaWeek,month',
     },
 
-    // TODO: Add event sources for each class
-
-    eventSources: events,
+    eventSources: [],
 
     eventRender: function(event, element) {
       $(element).click(function(e) {
@@ -97,4 +95,38 @@ $(function() {
     }
   });
 
+  updateEvents();
+
 });
+
+
+function updateEvents() {
+  let calendar = $('#calendar');
+
+  let courseFilters = $.map($('#course-filters input:checked'), val => val.value);
+  let eventFilters = $.map($('#event-filters input:checked'), val => val.value);
+
+  calendar.fullCalendar('removeEventSources');
+
+  $.each(courseFilters, function(i, val) {
+    calendar.fullCalendar('addEventSource', function(start, end, timezone, callback) {
+      for (i in events) {
+        let source = events[i];
+
+        if (source.id === val) {
+
+          // Reduce events to filtered ones
+          let filtered = source.events.reduce((filtered, event) => {
+            if (eventFilters.includes(event.type)) {
+              event.color = source.color;
+              filtered.push(event);
+            }
+            return filtered;
+          }, []);
+
+          callback(filtered);
+        }
+      }
+    });
+  });
+}
