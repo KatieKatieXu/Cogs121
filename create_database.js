@@ -4,7 +4,7 @@
 
 const sqlite3 = require ('sqlite3');
 //const db = new sqlite3.Database ('classes.db');
-const db = new sqlite3.Database ('/home/jasper/launch/ucsd/121/Cogs121/classes-test.db');
+const db = new sqlite3.Database ('/home/jasper/launch/ucsd/121/Cogs121/classes.db');
 
 //sequentially
 db.serialize(() => {
@@ -120,7 +120,8 @@ db.serialize(() => {
     "'2018-06-08'"];
 
   for (entry of cse131_discussion_dates) {
-    db.run(["INSERT INTO schedule VALUES",
+    db.run(
+      ["INSERT INTO schedule VALUES",
       "(",
       "'cse131',",
       entry + ",",
@@ -359,23 +360,21 @@ db.serialize(() => {
       entry[2],
       ")"].join(' '));
 
-    console.log (entry[0]);
   };
 
   //cogs121-------------------------------------------------
   //cogs123-------------------------------------------------
 
-  console.log ("filled");
   //backend use
 });
 
 //log
 db.each ("SELECT name, schedule FROM courses", (err, row) => {
-  console.log (row.name + ": " + row.schedule);
+  //console.log (row.name + ": " + row.schedule);
 });
 
 db.each ("SELECT date, id, type FROM schedule", (err, row) => {
-  console.log (row.id + ": " + row.date + ": " + row.type);
+  //console.log (row.id + ": " + row.date + ": " + row.type);
 });
 
 

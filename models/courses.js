@@ -4,26 +4,57 @@ const router = express.Router();
 const sqlite3 = require ('sqlite3');
 const db = new sqlite3.Database ('/home/jasper/launch/ucsd/121/Cogs121/classes.db');
 
-db.serialize(() => {
+access = function (classes, event_types) {
+  let access_return;
+  return access_return;
+}
 
-  db.all ('SELECT id, name FROM courses', (err, rows) => {
-    res.send (rows);
+/*
+ * ----------------------------------------------------------------------------
+  db.all('SELECT * FROM courses WHERE id=$id',
+    {
+      $id: req.params.id
+    },
+    (err, rows) => {
+      console.log (rows);
+      res.send (rows);
+    }
+  );
+
+  db.close();
+}
+
+ * ----------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------
+    db.all ('SELECT id, name FROM courses', (err, rows) => {
+      res.send (rows);
+    });
+
+  */
+
+//module.exports = router;
+// classes may be multiple, event_types may be multiple
+
+module.exports = function (classes, event_types) {
+  db.serialize(() => {
+//----------------------------------------------------------------------------
+    for (entry of classes) {
+      db.all("SELECT * FROM schedule WHERE id=$id",
+        {
+          $id: entry
+        },
+        (err, rows) => {
+          return rows;
+        }
+      );
+    }
+//----------------------------------------------------------------------------
   });
-});
-
-/* GET course page */
-
-db.all('SELECT * FROM courses WHERE id=$id',
-  {
-    $id: req.params.id
-  },
-  (err, rows) => {
-    console.log (rows);
-    res.send (rows);
-  }
-);
-
-db.close();
 
 
-module.exports = router;
+
+  //let data = access (classes, event_types);
+  //console.log (data);
+  //return data;
+
+}

@@ -1,3 +1,3 @@
 #! /bin/bash
-rm classes-test.db;
+rm classes.db;
 node create_database.js;
