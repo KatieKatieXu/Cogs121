@@ -1,17 +1,83 @@
 extends layout
 
 block content
-    div(class='col-md-9 ml-sm-auto col-lg-10 px-4' role='main')
-        div(class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom')
-            h1(class='h2') Week 4 - April 2018
-            div(class='btn-toolbar mb-2 mb-md-0')
-                div(class='btn-group mr-2')
-                    button(class='btn btn-sm btn-outline-secondary') Day
-                    button(class='btn btn-sm btn-primary') Week
-                    button(class='btn btn-sm btn-outline-secondary') Month
-        iframe(
-            id='1491563361'
-            src='https://www.google.com/calendar/embed?src=eng.ucsd.edu_96g4u69tnnrvl38rncb3ei3vd0@group.calendar.google.com&amp;color=%23668CD9&amp;src=eng.ucsd.edu_jp0fp8ec8vr0kd3lp5ltqlbqc4@group.calendar.google.com&amp;color=%23D96666&amp;mode=WEEK&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showTabs=1&amp;showCalendars=0&amp;hl=en&amp;authuser=0'
-            width='100%' height='600px')
 
+  div(class='container-fluid')
+    div(id='content' class='row')
 
+      nav(id='sidebar')
+        div(class='sticky-top')
+          a(href='#')
+            i(class='fas fa-user')
+            span Account
+          a(href='#' class='active')
+            i(class='fas fa-calendar')
+            span Calendar
+          a(href='#')
+            i(class='fas fa-clock')
+            span Timeline
+
+      #calendar-filter
+        .button-group
+          h5.pt-1 Calendars
+        #calendar-filters
+          .list-group
+            button.list-group-item.list-group-item-action(type='button'
+            data-toggle='collapse' data-target="#course-filters"
+            aria-expanded="true" aria-controls="course-filters")
+              | Courses
+              i#courses-chevron.float-right.fas.fa-chevron-down.pt-1
+            #course-filters.collapse.show
+              .filter-container
+                .form-check
+                  label.form-check-label
+                    input.form-check-input(type='checkbox' value='' checked)
+                    span.ml-2 COGS 121
+                .form-check
+                  label.form-check-label
+                    input.form-check-input(type='checkbox' value='' checked)
+                    span.ml-2 CSE 131
+            button.list-group-item.list-group-item-action(type='button'
+            data-toggle='collapse' data-target="#event-filters"
+            aria-expanded="true" aria-controls="event-filters")
+              | Events
+              i#event-chevron.float-right.fas.fa-chevron-down.pt-1
+            #event-filters.collapse.show
+              .filter-container
+                .form-check
+                  label.form-check-label
+                    input.form-check-input(type='checkbox' value='')
+                    span.ml-2 Lectures
+                .form-check
+                  label.form-check-label
+                    input.form-check-input(type='checkbox' value='')
+                    span.ml-2 Office Hours
+                .form-check
+                  label.form-check-label
+                    input.form-check-input(type='checkbox' value='')
+                    span.ml-2 Deadlines
+
+          #datepicker
+      main.col
+        div(id='calendar-container')
+          div(id='calendar')
+
+  #eventModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title Modal title
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          b Topic
+          p#event-topic
+
+  #lecture-popover-content
+    h1 Hello
+
+block scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+  script(src='javascripts/data.js')
+  script(src='javascripts/main.js')
