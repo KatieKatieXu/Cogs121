@@ -23,12 +23,21 @@ block content
 
 			//connect to real database
 
-			Object.keys(db).forEach(function(class){
-				x.push(class.name);
-				y1.push(Object.keys(class.assessments).length);
-				y2.push(Object.keys(class.homeworks).length);
-				y3.push(Object.keys(class.readings).length); 
-			});
+			
+			x.push("COGS 121");
+			y1.push(3);
+			y2.push(7);
+			y3.push(0); 
+			
+			x.push("CSE 131");
+			y1.push(2);
+			y2.push(10);
+			y3.push(2); 
+			
+			x.push("COGS 187A");
+			y1.push(0);
+			y2.push(11);
+			y3.push(5); 			
 
 			var data = [];
 
