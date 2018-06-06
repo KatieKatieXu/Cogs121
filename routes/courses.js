@@ -1,3 +1,8 @@
+/*
+ *  responds to client getrequests of for server data in various transactions
+ *  with the site
+ *
+ */
 const express = require('express');
 const router = express.Router();
 

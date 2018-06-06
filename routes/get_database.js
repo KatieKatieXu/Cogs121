@@ -1,3 +1,8 @@
+/*
+ *  Test the database; part of the 'terminal interface' to creating the backend
+ *  of this application alongside ../create_database.js
+ *
+ */
 
 const sqlite3 = require ('sqlite3');
 //const db = new sqlite3.Database ('../classes.db'); //opens db

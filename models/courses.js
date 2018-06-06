@@ -1,3 +1,8 @@
+/*
+ *  Database interaction logic to respond to get requests through routes.
+ *  Querries the database with the parameters requested by the client logic
+ *
+ */
 const express = require('express');
 const router = express.Router();
 

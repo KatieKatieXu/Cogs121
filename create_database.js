@@ -1,5 +1,8 @@
 /*
- * Building initial db
+ * Building db. the terminal interface to the database creation for the site
+ * this populates all tables in the database and is tested with
+ * routes/get_database.js
+ *
  */
 
 const sqlite3 = require ('sqlite3');

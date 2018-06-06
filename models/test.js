@@ -1,3 +1,7 @@
+/*
+ *  test interactions with the courses.js model. A holdover from development
+ *
+ */
 const express = require('express');
 const router = express.Router();
 
