@@ -7,10 +7,11 @@ this will be our checklist of specific units of work to be done, and is split in
 ### Backend
   - [ ] choose firebase or sqlite (thinking about user auth)
   - [ ] FILL populate it with our 3 choosen classes
+      - COGS 121, COGS 123, CSE 131
     - [ ] lecture times
-    - [ ] assignment due dates
     - [ ] di times
     - [ ] office hours
+    - [ ] assignment due dates
     - [ ] FILL
   - [ ] FILL Heitor's diagram
   - [ ] 
@@ -25,7 +26,6 @@ this will be our checklist of specific units of work to be done, and is split in
   - [ ]
 
 ### Upkeep
-  - RECURRING: Nightly update and communication
   - Continue to provide input to this list, and feel free to replace any box with more specific subtasks
   - Everywhere that FILL exists in the above list indicates a decision that needs to be made to make the point actionable
 

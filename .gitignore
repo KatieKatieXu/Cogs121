@@ -1,3 +1,6 @@
 node_modules/
 
 routes/get_database.js
+jasper.md
+classes-test.db
+
