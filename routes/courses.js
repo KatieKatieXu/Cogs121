@@ -3,19 +3,10 @@ const router = express.Router();
 
 const model = require('/home/jasper/launch/ucsd/121/Cogs121/models/courses.js');
 
-//router.get('/', function (req, res) { }
-//router.get('/events/', function (req, res) { }
+router.get('/events/', function (req, res) { 
+  res.send (model (req.classes, req.event_types));
+});
 
-
-
-router.get('/events/', function (req, res) { });
-
-router.get('/events/:id', function (req, res) { });
-
-console.log (model(['cse131'], []));
-
-
-
-
+//console.log (model(['cse131'], []));
 
 module.exports = router;
