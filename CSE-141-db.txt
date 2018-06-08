@@ -1,0 +1,461 @@
+/*
+    Raw text file to be used as a datasource to be parsed txt > json > entered into sqlite db
+    harvested from the CSE 141 homepage
+*/
+
+
+courses
+ 	id      cse141
+ 	name    CSE 141
+	instr_name Leo Porter
+	piazza(link) https://piazza.com/class/jf47iwaoqqg5ep
+	podcast(link) https://podcast.ucsd.edu/default.aspx
+	slides(link) https://drive.google.com/drive/folders/1zQkQUG-FPHouNNXBt5KU48m7GqritKGg
+	hours_taken 40
+	hw_count 7
+	assess_count 2
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-03T09:30:00
+ 	end_time      2018-04-03T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-03T11:00:00
+ 	end_time      2018-04-03T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-04T12:00:00
+ 	end_time      2018-04-04T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+	id            cse141
+ 	begin_time    2018-04-05T09:30:00
+ 	end_time      2018-04-05T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-06T10:00:00
+ 	end_time      2018-04-06T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-10T09:30:00
+ 	end_time      2018-04-10T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-10T11:00:00
+ 	end_time      2018-04-10T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-11T12:00:00
+ 	end_time      2018-04-11T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-12T09:30:00
+ 	end_time      2018-04-12T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-13T10:00:00
+ 	end_time      2018-04-13T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-17T09:30:00
+ 	end_time      2018-04-17T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-17T11:00:00
+ 	end_time      2018-04-17T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-18T12:00:00
+ 	end_time      2018-04-18T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-19T09:30:00
+ 	end_time      2018-04-19T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-20T10:00:00
+ 	end_time      2018-04-20T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-24T09:30:00
+ 	end_time      2018-04-24T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-24T11:00:00
+ 	end_time      2018-04-24T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-25T12:00:00
+ 	end_time      2018-04-25T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-26T09:30:00
+ 	end_time      2018-04-26T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-04-27T10:00:00
+ 	end_time      2018-04-27T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-01T09:30:00
+ 	end_time      2018-05-01T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-01T11:00:00
+ 	end_time      2018-05-01T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-02T12:00:00
+ 	end_time      2018-05-02T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-03T09:30:00
+ 	end_time      2018-05-03T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-03T10:00:00
+ 	end_time      2018-05-03T10:50:00
+ 	place         WLH 2005
+ 	type          exam
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-04T10:00:00
+ 	end_time      2018-05-04T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-08T09:30:00
+ 	end_time      2018-05-08T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-08T11:00:00
+ 	end_time      2018-05-08T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-09T12:00:00
+ 	end_time      2018-05-09T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-10T09:30:00
+ 	end_time      2018-05-10T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-11T10:00:00
+ 	end_time      2018-05-11T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-15T09:30:00
+ 	end_time      2018-05-15T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-15T11:00:00
+ 	end_time      2018-05-15T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-16T11:00:00
+ 	end_time      2018-05-16T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-17T09:30:00
+ 	end_time      2018-05-17T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-18T10:00:00
+ 	end_time      2018-05-18T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-22T09:30:00
+ 	end_time      2018-05-22T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-22T11:00:00
+ 	end_time      2018-05-22T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-23T12:00:00
+ 	end_time      2018-05-23T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-24T09:30:00
+ 	end_time      2018-05-24T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-25T10:00:00
+ 	end_time      2018-05-25T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-29T09:30:00
+ 	end_time      2018-05-29T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-29T11:00:00
+ 	end_time      2018-05-29T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-30T12:00:00
+ 	end_time      2018-05-30T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-05-31T09:30:00
+ 	end_time      2018-05-31T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-01T10:00:00
+ 	end_time      2018-06-01T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-05T09:30:00
+ 	end_time      2018-06-05T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-05T11:00:00
+ 	end_time      2018-06-05T12:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-06T12:00:00
+ 	end_time      2018-06-06T13:00:00
+ 	place         CSE 2108
+ 	type          OH
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-07T09:30:00
+ 	end_time      2018-06-07T10:50:00
+ 	place         WLH 2005
+ 	type          lecture
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-08T10:00:00
+ 	end_time      2018-06-08T10:50:00
+ 	place         Ledden Aud
+ 	type          discussion
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-08T14:00:00
+ 	end_time      2018-06-08T15:00:00
+ 	place         WLH 2005
+ 	type          discussion
+
+
+schedule
+ 	id            cse141
+ 	begin_time    2018-06-12T10:00:00
+ 	end_time      2018-06-12T10:50:00
+ 	place         PC Ballroom East
+ 	type          exam
+
+assignments
+ 	id              cse131
+	type  	
+ 	name            PA1
+ 	submit(link)   ...
+  	assigned	2018-04-13
+ 	due       2018-04-17T23:59:00
+	description(link) …
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW1
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-04-07T08:00:00
+ 	due      2018-04-18T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW2
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-04-19T08:00:00
+ 	due      2018-04-25T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW3
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-04-26T08:00:00
+ 	due      2018-05-01T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW4
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-05-10T08:00:00
+ 	due      2018-05-16T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW5
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-05-17T08:00:00
+ 	due      2018-05-23T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW6
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-05-29T08:00:00
+ 	due      2018-05-31T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu
+
+assignments
+ 	id              cse131
+	type  		homework
+ 	name            HW7
+ 	submit(link)	https://gradescope.com/courses/17351
+  	assigned	2018-06-05T08:00:00
+ 	due      2018-06-08T23:59:00
+	description(link)	http://csemoodle3.ucsd.edu

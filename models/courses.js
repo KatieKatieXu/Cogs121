@@ -1,6 +1,9 @@
 /*
  *  Database interaction logic to respond to get requests through routes.
- *  Querries the database with the parameters requested by the client logic
+ *  Querries the database with the parameters requested by the client logic.
+ *
+ *  A simple function to be included and called in the routes/ and to populate
+ *  the frontend calendar of events.
  *
  */
 const express = require('express');
@@ -14,30 +17,6 @@ access = function (classes, event_types) {
   return access_return;
 }
 
-/*
- * ----------------------------------------------------------------------------
-  db.all('SELECT * FROM courses WHERE id=$id',
-    {
-      $id: req.params.id
-    },
-    (err, rows) => {
-      console.log (rows);
-      res.send (rows);
-    }
-  );
-
-  db.close();
-}
-
- * ----------------------------------------------------------------------------
- * ----------------------------------------------------------------------------
-    db.all ('SELECT id, name FROM courses', (err, rows) => {
-      res.send (rows);
-    });
-
-  */
-
-//module.exports = router;
 // classes may be multiple, event_types may be multiple
 
 module.exports = function (classes, event_types) {
@@ -55,11 +34,5 @@ module.exports = function (classes, event_types) {
     }
 //----------------------------------------------------------------------------
   });
-
-
-
-  //let data = access (classes, event_types);
-  //console.log (data);
-  //return data;
 
 }
