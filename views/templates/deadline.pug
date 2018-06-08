@@ -1,0 +1,13 @@
+.popover-content
+  ul.list-group.list-group-flush
+    li.list-group-item.pl-0
+      .pb-1
+        i.fas.fa-calendar.fa-fw
+        span.p-4= date
+      .pb-1
+        i.fas.fa-clock.fa-fw
+        span.p-4= time
+      if link
+        .pb-1
+          i.fas.fa-link.fa-fw
+          a.p-4(href=link target="_blank  ") Writeup

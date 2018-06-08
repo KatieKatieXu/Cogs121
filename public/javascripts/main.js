@@ -2,13 +2,15 @@ $(function() {
 
   let activePopover = null;
 
-  // initialize calendar with options
+  // calendar
+
   $('#calendar').fullCalendar({
 
     defaultView: 'agendaWeek',
     height: 'parent',
     nowIndicator: true,
     navLinks: true,
+    allDayText: "",
 
     customButtons: {
       myToday: {
@@ -25,8 +27,6 @@ $(function() {
       right: 'agendaDay,agendaWeek,month',
     },
 
-    eventSources: [],
-
     eventRender: function(event, element) {
       $(element).click(function(e) {
         e.stopPropagation();
@@ -37,14 +37,17 @@ $(function() {
           activePopover.popover('hide');
         }
 
-        activePopover = element;
+        let url = '/events/' + event.course + '/' + event.id;
 
-        //TODO: Create popover
-        element.popover({
-          title: event.title,
-          content: $('#lecture-popover-content'),
-          trigger: 'manual',
-        }).popover('show');
+        $.get({url, cache: false}, function(html) {
+          activePopover = element;
+          element.popover({
+            title: event.title,
+            content: html,
+            trigger: 'manual',
+            html: true,
+          }).popover('show');
+        });
       });
     },
 
@@ -55,6 +58,8 @@ $(function() {
     },
 
   });
+
+  // calendar filters
 
   $('#course-filters').on('show.bs.collapse', function() {
     $('#courses-chevron').
@@ -76,29 +81,28 @@ $(function() {
         addClass('fa-chevron-left');
   });
 
+  // datepicker
+
   $('#datepicker').datepicker({
     todayHighlight: true,
     maxViewMode: 0,
   }).on('changeDate', function(event) {
     if (event.date) {
       $('#calendar').fullCalendar('gotoDate', event.date.toISOString());
-      $(this).find('.active').removeClass(('active'));
     }
   });
 
   $('.datepicker-switch').addClass('today');
 
   $(document).click(function(event) {
-    if (activePopover && !$(event.target).parent().hasClass('popover')) {
+    if (activePopover && !$(event.target).parents('.popover').length) {
       activePopover.popover('hide');
       activePopover = null;
     }
   });
 
   updateEvents();
-
 });
-
 
 function updateEvents() {
   let calendar = $('#calendar');
@@ -106,27 +110,18 @@ function updateEvents() {
   let courseFilters = $.map($('#course-filters input:checked'), val => val.value);
   let eventFilters = $.map($('#event-filters input:checked'), val => val.value);
 
-  calendar.fullCalendar('removeEventSources');
+  let query = 'courses=' + courseFilters.join(',') +
+      '&events=' + eventFilters.join(',');
 
-  $.each(courseFilters, function(i, val) {
-    calendar.fullCalendar('addEventSource', function(start, end, timezone, callback) {
-      for (i in events) {
-        let source = events[i];
-
-        if (source.id === val) {
-
-          // Reduce events to filtered ones
-          let filtered = source.events.reduce((filtered, event) => {
-            if (eventFilters.includes(event.type)) {
-              event.color = source.color;
-              filtered.push(event);
-            }
-            return filtered;
-          }, []);
-
-          callback(filtered);
-        }
-      }
+  // Get event data from server
+  $.get('/events?' + query, function(data) {
+    calendar.fullCalendar('removeEventSources');
+    data.forEach(function(source) {
+      source.events.forEach(value => {
+        value.color = source.color;
+        value.course = source.id;
+      });
+      calendar.fullCalendar('addEventSource', source.events);
     });
   });
 }

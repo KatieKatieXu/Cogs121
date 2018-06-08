@@ -1,79 +1,52 @@
 extends layout
 
 block content
+  #calendar-filter
+    .button-group
+      h5.pt-1 Calendars
+    #calendar-filters
+      .list-group
+        button.list-group-item.list-group-item-action(type='button'
+        data-toggle='collapse' data-target="#course-filters"
+        aria-expanded="true" aria-controls="course-filters")
+          | Courses
+          i#courses-chevron.float-right.fas.fa-chevron-down.pt-1
+        #course-filters.collapse.show
+          .filter-container
+            .form-check
+              label.form-check-label(style='color: orange;')
+                input.form-check-input(type='checkbox' value='cogs121' checked onchange='updateEvents()')
+                span.ml-2 COGS 121
+            .form-check
+              label.form-check-label(style='color: lightblue;')
+                input.form-check-input(type='checkbox' value='cse131' checked onchange='updateEvents()')
+                span.ml-2 CSE 131
+        button.list-group-item.list-group-item-action(type='button'
+        data-toggle='collapse' data-target="#event-filters"
+        aria-expanded="true" aria-controls="event-filters")
+          | Events
+          i#event-chevron.float-right.fas.fa-chevron-down.pt-1
+        #event-filters.collapse.show
+          .filter-container
+            .form-check
+              label.form-check-label
+                input.form-check-input(type='checkbox' value='lecture' checked onchange='updateEvents()')
+                span.ml-2 Lectures
+            .form-check
+              label.form-check-label
+                input.form-check-input(type='checkbox' value='officehours' checked onchange='updateEvents()')
+                span.ml-2 Office Hours
+            .form-check
+              label.form-check-label
+                input.form-check-input(type='checkbox' value='assignment' checked onchange='updateEvents()')
+                span.ml-2 Deadlines
+      #datepicker
 
-  div(class='container-fluid')
-    div(id='content' class='row')
-
-      nav(id='sidebar')
-        div(class='sticky-top')
-          a(href='#')
-            i(class='fas fa-user')
-            span Account
-          a(href='#' class='active')
-            i(class='fas fa-calendar')
-            span Calendar
-          a(href='#')
-            i(class='fas fa-clock')
-            span Timeline
-
-      #calendar-filter
-        .button-group
-          h5.pt-1 Calendars
-        #calendar-filters
-          .list-group
-            button.list-group-item.list-group-item-action(type='button'
-            data-toggle='collapse' data-target="#course-filters"
-            aria-expanded="true" aria-controls="course-filters")
-              | Courses
-              i#courses-chevron.float-right.fas.fa-chevron-down.pt-1
-            #course-filters.collapse.show
-              .filter-container
-                .form-check
-                  label.form-check-label
-                    input.form-check-input(type='checkbox' value='cogs121' checked onchange='updateEvents()')
-                    span.ml-2 COGS 121
-                .form-check
-                  label.form-check-label
-                    input.form-check-input(type='checkbox' value='cse131' checked onchange='updateEvents()')
-                    span.ml-2 CSE 131
-            button.list-group-item.list-group-item-action(type='button'
-            data-toggle='collapse' data-target="#event-filters"
-            aria-expanded="true" aria-controls="event-filters")
-              | Events
-              i#event-chevron.float-right.fas.fa-chevron-down.pt-1
-            #event-filters.collapse.show
-              .filter-container
-                .form-check
-                  label.form-check-label
-                    input.form-check-input(type='checkbox' value='lecture' checked onchange='updateEvents()')
-                    span.ml-2 Lectures
-                .form-check
-                  label.form-check-label
-                    input.form-check-input(type='checkbox' value='assignment' checked onchange='updateEvents()')
-                    span.ml-2 Deadlines
-
-          #datepicker
-      main.col
-        div(id='calendar-container')
-          div(id='calendar')
-
-  #eventModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered(role='document')
-      .modal-content
-        .modal-header
-          h5.modal-title Modal title
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-        .modal-body
-          b Topic
-          p#event-topic
-
-  #lecture-popover-content
-    h1 Hello
+  main.col
+    #calendar-container
+      #calendar
 
 block scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
-  script(src='javascripts/data.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js")
   script(src='javascripts/main.js')

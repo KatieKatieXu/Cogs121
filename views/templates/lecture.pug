@@ -1,0 +1,30 @@
+.popover-content
+  ul.list-group.list-group-flush
+    li.list-group-item.pl-0
+      .pb-1
+        i.fas.fa-calendar.fa-fw
+        span.p-4= date
+      .pb-1
+        i.fas.fa-clock.fa-fw
+        span.p-4= time
+      .pb-1
+        i.fas.fa-map-marker.fa-fw
+        span.p-4= location
+    li.list-group-item.pl-0
+      if topic
+        .pt-1
+          i.fas.fa-align-left.fa-fw
+          a.p-4= topic
+      if chapters
+        .pt-1
+          i.fas.fa-book.fa-fw
+          span.p-4= chapters
+    li.list-group-item.pl-0
+      if podcast
+        .pt-1
+          i.fas.fa-podcast.fa-fw
+          a.p-4(href='#')= podcast
+      if slides
+        .pt-1
+          i.fas.fa-file.fa-fw
+          a.p-4(href='#')= slides
