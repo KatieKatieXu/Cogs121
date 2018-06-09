@@ -1,3 +1,5 @@
+/* allows the calendar to get the coures information as well as filter the events by type on the calendar */
+
 const express = require('express');
 const router = express.Router({});
 const pug = require('pug');
