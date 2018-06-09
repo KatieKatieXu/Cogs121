@@ -81,12 +81,16 @@ All - versions of the databse in json format
 
 - views/error.pug
 
-Heitor/Niral - template for frontend rendering
+Heitor/Niral - template for frontend rendering of error page
  
  - views/index.pug
 
-Heitor/Niral - template for frontend rendering
+Heitor/Niral - template for frontend rendering of calendar
 
 - views/layout.pug
 
-Heitor/Niral - template for frontend rendering
+Heitor/Niral - template for frontend rendering of main pages
+
+- views/test.pug
+
+Heitor/Niral - template for frontend rendering of datavisualization
