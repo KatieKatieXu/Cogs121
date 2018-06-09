@@ -1,3 +1,5 @@
+/* render one of the two main pages of the site */
+
 const express = require('express');
 const router = express.Router({});
 
