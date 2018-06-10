@@ -95,6 +95,8 @@ Heitor/Niral - template for frontend rendering of main pages
 
 Heitor/Niral - template for frontend rendering of datavisualization
 
+Yue(Katherine) - Design the pop-up window(when click on the event on the calendar)
+
 Yue(Katherine) - Record the video and the audio, edit it into 2 minutes
 
 - https://www.youtube.com/watch?v=YTxgk2JGQ_U
