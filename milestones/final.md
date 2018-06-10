@@ -94,5 +94,7 @@ Heitor/Niral - template for frontend rendering of main pages
 - views/test.pug
 
 Heitor/Niral - template for frontend rendering of datavisualization
+
 Yue(Katherine) - Record the video and the audio, edit it into 2 minutes
+
 - https://www.youtube.com/watch?v=YTxgk2JGQ_U
